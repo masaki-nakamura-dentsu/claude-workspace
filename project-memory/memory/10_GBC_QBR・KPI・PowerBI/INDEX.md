@@ -1,0 +1,40 @@
+# 10_GBC_QBR・KPI・PowerBI/ 索引
+- PowerBI: GBC dashboard:powerbi_migration_gbc_dashboard
+- 現状:powerbi_gbc_dashboard_current_state
+- 開発フォルダ場所:powerbi_dev_folder_location
+- 貢献利益pages:powerbi_migration_gbc_dashboard_koken
+- QBR関連:qbr_0708_rollback_tableau
+- ブリッジ/TS落とし穴:qbr_2026q2_bridge_chart_and_tableau_pitfalls
+- NULL結合:qbr_2026q2_null_join_troubleshooting
+- GBC26業務指示書:gbc_qbr_2026_business_instruction_sheet
+- openpyxl vタグ破損:openpyxl_empty_v_tag_corruption
+- PBI/TS突合:qbr_powerbi_tableau_verification_20260906
+- 貢献度乖離バグ:qbr_koken_ratio_kakudo_filter_bug_20260907
+- PowerAutomate出退勤投稿:powerautomate_attendance_summary_project
+- 出張管理システム:gbc_business_trip_management_powerbi
+- 税務調査CAS vs GL:tax_audit_2026_cas_vs_gl_reconciliation
+- 利益スプリット: 管理者CC修正:profit_split_app_admin_cc_bug_fixed
+- 月またぎ上書きバグ:profit_split_app_headerno_month_collision_bug
+- データソース接続破損:profit_split_app_datasource_reconnect_20260914
+- PowerBI/CAS既知不具合:powerbi_raw_ytd_ap1_gap_incident_20260821
+- 赤字表示:powerbi_negative_red_format_quirk
+- CAS設定PA:cas_setting_request_powerautomate_flow
+- CAS月次PL:cas_csv_download_automation
+- クライアント名マッピング欠落:powerbi_client_name_mapping_gap_20260903
+- JCIピッチリスト削除:jci_pitchlist_deletion_condition_check_202609
+- 検索VBA:jci_pitchlist_client_search_vba
+- PowerBI: JCIピッチ状況チャート:powerbi_jci_pitch_status_chart
+- 受発注→Crosstable月次更新:qbr_crosstable_monthly_update_process
+- PBIX新形式(PBIR)直読み技法:pbix_pbir_layout_parsing_technique
+- CAS見込混同:qbr_cas_mikomi_source_report
+- 達成度%不一致:kgikpi_yosan_kaidoritsu_saishinjissekitsuki_bug_20260908
+- CAS売総リネーム:kgikpi_cas_uriage_soritsuki_rename
+- COMBINEDズレ:qbr_cas_combined_vs_rawytd_ap2sp1_gap_20260909
+- BD前年度実績誤り:kpi0909_bd_zenendo_jisseki_error_20260910
+- 案件ID衝突:qbr_powerbi_case_collision_investigation_20260910
+- COMBINED全量再構築:qbr_combined_xlsx_rebuild_20260911
+- powerbi-cover-dashboard-project:powerbi_cover_dashboard_project
+- gbc_kpikgi_sharepoint_export:gbc_kpikgi_sharepoint_export
+- GBC予算予測可能性分析:gbc_budget_predictability_analysis
+- GEM局別クライアント取得:gem_bp_client_list_extraction
+- 2026-10-26 KGI/KPI PDF 0 bytes失敗と復旧・リトライ追加:kgikpi_export_20261026 (work_status)

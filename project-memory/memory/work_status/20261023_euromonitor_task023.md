@@ -1,0 +1,25 @@
+# Euromonitor task-023 (個人Mac)
+Status: in-progress
+- 作業ブラウザは dentsu-work-bot (port 9231, masaki.nakamura@dentsu.co.jp) でログイン済み。9227(timetree-bot)は使わない。
+- 3年分の総件数 2,814件(Country Report 1516 / Local Company Profile 905 / Opinion 186 / Briefing 182 / Video 19 / Global Company Profile 6)。catalog_all_20261023.json に保存。
+- categoryIds を空にして industryCodes だけで業界別に取得できた。
+- 詳細ページは /analysis/tab (URLにID無し、カードをクリックして遷移)。開くとビューアが download-portal.euromonitor.com の署名付きPDF URLを取得する。Downloadボタンは ToggleDownloadParent() でメニューを開くだけ。
+- 未了: 1件のDL自動化(PDF URL取得元のAPI特定 or メニューからPDF選択)、範囲確認(ユーザー)、一括DL。
+- 1件DL成功(PDF/PPT)。ID指定で開く: 任意の /analysis/tab ページ上の AnalysisContext form の AnalysisId/TypeId/ItemTypeId を書き換えて submit(ホームの form では不可、ID直POSTも不可=Error Page)。
+- DL本体: ページ内 Download() 関数から checksum を抜き、GET /analysis/downloadpdf|downloadppt?analysisId=..&analysisTypeId=..&itemTypeId=..&elementId=0&elementTypeId=0&checksum=..&searchString=&languageCode=en を fetch。pptは旧形式.ppt(約25MB)。
+- 次: catalog再取得(analysisTypeId/itemTypeId保存)→ 範囲確認後に一括DL。
+- 15:30頃 ユーザー指示で「全件(2,814)」DL開始。bulk.js(調査スクリプト/)をバックグラウンド実行、進捗は ../dl_progress.jsonl(再実行で続きから)、ログ dl_run.log。空き<10GBで自動停止。容量逼迫時はFinderでdownloadsを「オンライン専用」にする(CLI不可。GUI操作は要許可)。
+- 完了時: ダウンロード結果.md を作成(件数・失敗・PDFなし一覧)。
+- 分担: 個人Mac=並び順(日付降順)0〜959(IDX_TO=960, 4並列, dl_progress.jsonl)。会社Mac=960〜末尾(relay task-024, 手順 調査スクリプト/会社Mac用_実行手順.md, dl_progress_company.jsonl, CDP9226)。bulk.js は環境変数 CDP_PORT/PW_PATH/IDX_FROM/IDX_TO/PROGRESS_NAME 対応。LCP(905件)はDLボタン無しで対象外。
+- 16:30 個人Mac分(0〜959)完了(960成功、失敗はLCPの4件のみ)。会社Macがtask-024を開始(960〜末尾)したため、個人Macは1435〜末尾のみに絞って再起動(重複回避)。会社Mac側が1435に達したらPDFは既存スキップ。全体完了後に ダウンロード結果.md を作成。
+- 16:45 時点: 成功1,191件。個人Mac=1435〜末尾を4並列で処理中(1本終了)、会社Mac=task-024で960〜を処理中。再開コマンド: 調査スクリプト/会社Mac用_実行手順.md と同じ(個人MacはCDP_PORT=9231, IDX_FROM=1435, 引数 k 4)。両方終了後: dl_progress*.jsonl を集計し ダウンロード結果.md(件数・失敗・PDFなし・LCP905件は対象外)を作成、task-023/024を done に、Teams [DONE]通知。
+- 17:01 再開確認: 個人Mac dl_progress.jsonl 1,266行(成功1,260/失敗6)。bulk.js 2本(k=1,3)まだ稼働中、0・2は終了。dl_progress_company.jsonl は0行(会社Mac側の進捗は未同期/未確認)。空き63GB。両方終了後に ダウンロード結果.md 作成が残り。
+- 18:15 k=1,3は完了(fail 0)。k=0,2は16:36/16:49にブラウザ切断で異常終了していたため再起動(残り約132件、CDP9231, IDX_FROM=1435)。会社Mac進捗は依然0行。
+- 18:30 task-025(個人Mac bulk.js停止、再実行禁止)を確認。見落として18:25に再起動していたため18:29に停止。成功1,321件。bulk.jsは再起動耐性パッチ済み(bulk_20261023_bak.jsが元)。残りは会社Mac(task-024)。集計(ダウンロード結果.md)は会社Mac完了後に個人Macで作る。
+- 18:50頃 ダウンロード結果.md 作成(実ファイル突合: 2,000ファイル=PDF1815+PPT185、PDFなし94=Opinion75+Video19、LCP905対象外、BriefingのPPT3件未取得)。task-023/024 の done 化とTeams [DONE] は未実施。
+- 19:30 ユーザー依頼: LCP905件をテキスト+HTMLで保存。調査スクリプト/lcp.js(3並列, CDP9231)で LCP_テキスト/ に .txt と .html(約1.4MB、SVGグラフ入り、base href付きでCSSはweb参照)を保存、進捗 lcp_progress.jsonl(再実行で続き)。約11件/分=約80分。完了後ダウンロード結果.md のLCP欄を更新、task-023 done化+Teams [DONE]。
+- 19:48 監視 調査スクリプト/lcp_watchdog.sh 起動(caffeinate付, 2分ごと確認。無進捗3回or稼働<3本で再起動+Teams WARN、6回超でWAIT、全905件でOK通知。ログ lcp_watchdog.log)。LCP進捗 413/905。
+- 20:15 LCP 905件 html+txt 全件保存完了(失敗0, 1.2GB)。ダウンロード結果.md 更新。Status: done
+- 20:30 ユーザー確認: Opinion(PDFなし75件)はDownloadメニューにPDFがあるが押すとEuromonitor側エラー→来週再アクセスして取り直す。Videoは対象外。開いた確認用タブは閉じた。次回: Opinion 75件のPDFを再取得(bulk.jsでtypes=Opinion、PDFなしのIDのみ)。
+- 2026-10-24 Opinion再取得: 75件中36件PDF取得、39件はサーバー500のまま(dl_progress_opinion_retry.jsonl)。結果.md追記済み。Videoは対象外。
+- 2026-10-24 BriefingのPPT3件+Card Rewards PDF(0バイト)を chunk_dl.js で取得完了。Briefing PPT 182/182。残: Opinion 39件(サーバー500)。task-023は実質完了。

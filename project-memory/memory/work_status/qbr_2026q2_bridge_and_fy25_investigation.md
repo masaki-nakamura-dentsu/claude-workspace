@@ -1,0 +1,6 @@
+# QBR 2026Q2 bridge chart + FY25 unforecasted-deal investigation
+
+## 2026-07-28T18:30:00.000Z
+Status: done
+What: Long session on GBC QBR 2026Q2 deck. (1) Found and fixed Tableau sort-by-field bugs in CAS実績/貢献実績 .twb files (hidden-year contamination + threshold-filter churn exclusion). (2) Built native PowerPoint bridge/waterfall charts for CAS売総 and 貢献売総 YoY (final canonical file: `GBC QBR 2026Q2_Draft20260728_07.pptx`, Meiryo UI fonts, 千円 units) after several rounds of getting the underlying numbers right — settled on official-published-deck figures over raw recomputation where they existed. (3) Root-caused a Japan Client pitch "Won" YTD apparent decrease via dated Salesforce snapshot folder (confirmed normal by user, a June data-entry 10x fix). (4) Extracted the ~¥146M of FY25 CAS 売上総利益 that was NOT in the Q2-end 確度A/B forecast but got booked by year-end, using dated archive snapshots (`Archive - Data for Tableau/20250723/`, `CAS集計/2507/`) — found October alone was ~47% of the gap; delivered client-level + deal-level breakdown to `.../QBR_2026Q2/2025Q2見込になく最終的に売総計上された案件リスト.xlsx`. Full reusable methodology written up in project memory `qbr_2026q2_bridge_chart_and_tableau_pitfalls.md`.
+Next: — (user ended session for the day; may return with follow-up questions on the same deck/data)

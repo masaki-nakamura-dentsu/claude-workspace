@@ -1,0 +1,8 @@
+- 2026-10-21 日経電子版の契約先を案内(電子版の月額プラン)。Status: done
+- 2026-10-21 日経の設定に着手。共有ブラウザ9226は日経に未ログインのため、ログイン画面を開いてユーザーのログインを待っている。Python=/Library/Frameworks/Python.framework/Versions/3.14/bin/python3(playwrightあり)。Status: waiting
+- 2026-10-21 日経: キーワード4件フォロー、Myニュースメールをオン、mail収集器に日経まとめメールの分割を追加。初回メールで取り込み確認が残り。Status: done
+- 2026-10-21 日経の立替精算リマインダーを設定(launchd nikkeiexpense、初回11/25・以降毎月5日)。Status: done
+- 2026-10-21 精算リマインダー更新(毎月20日、JU/科目/GLOMG41/使用理由入り)。Status: done
+- 2026-10-21 日経メール自動点検を追加(launchd nikkeicheck 3時間ごと)。Status: done
+- 2026-10-22 日経メールの取り込みを実メールの形式に合わせて修正、10/21分(省エネ住宅事業の情報漏洩)を再取り込み。Status: done
+- 2026-10-22 着手: ①group-cc@dentsu.com(dentsu デイリーニュース)を記事単位+海外フィルタで集計に入れる ②日経の過去人事記事を収集して海外系の組織図を作る。Status: in_progress

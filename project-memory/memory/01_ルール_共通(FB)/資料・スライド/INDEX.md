@@ -1,0 +1,41 @@
+# 01_ルール_共通(FB)/資料・スライド/ 索引
+- dentsu PPTXテンプレ:dentsu_pptx_template
+- Visual-first方針:pptx_visual_first_policy
+- 提案書FW:proposal_writing_framework
+- FB:pptx標準ルール集（未使用レイアウト＋PowerPointセクション削除）:f_pptx_prune_unused_sections
+- 実例写真:f_pptx_use_real_example_photos
+- 背景差別:f_pptx_content_slide_background_differs_from_title
+- 意図セクション:f_pptx_intentional_sections_only
+- pptx安全編集:f_dont_overwrite_open_pptx
+- 再構築禁止:f_pptx_edit_existing_not_rebuild
+- 白黒版_BW接尾辞:f_bw_filename_suffix
+- ファイル名版:f_pptx_filename_versioning
+- User's writing style:user_writing_style
+- FB:AI臭除去:f_ai_smell_avoidance
+- 語彙集正本:ai-smell-lexicon
+- スライド好み:f_shashinjuku_pptx_style_preferences
+- pptx確認qlmanage:f_pptx_visual_qa_method
+- 日英併記1ファイル:f_bilingual_single_file_pptx
+- FB:出自は非表示:f_dont_surface_framework_provenance
+- 実施例URL:f_ai_tips_slide_title_hyperlink_is_jissirei_url
+- GBCクレデン マスタースライドバンク:gbc_credentials_slide_bank_project
+- FB:非公表は0と表記しない:f_non_disclosed_vs_zero
+- 役員限定資料は実名開示OK:f_executive_deck_disclosure_and_brevity
+- pptx軽量:pptx_filesize_reduction_technique
+- レイアウト統合:pptx_layout_consolidation_technique
+- Dentsu France JCIポスター:dentsu_france_jci_pptx_project
+- 仏政府ピッチNational Resilience:france_pitch_national_resilience_deck
+- 「ブリーフ」はクライアント視点入力:f_brief_means_client_brief
+- FB:具体例は仕組みの動作イメージ:f_example_not_scope
+- 生成時の図表捏造:f_generation_time_diagram_fabrication
+- feedback-agency-vocab-naming-branding:f_agency_vocab_naming_branding
+- スライドのAIっぽさを消す方法:f_deck_appendix_same_style
+- FB:ESは戦略を書く、作業範囲の言い直しはNG:f_exec_summary_strategy_not_scope
+- FB:スライド文言は言い切り型:f_slide_text_iikiri
+- FB:pptx再zipは全部品+検査:f_pptx_repack_include_all_parts
+- FB:報告書は継ぎ足さず組み直す:f_deck_no_patchwork
+- FB:幹部資料は数字・グラフ・単位・初心者ロジック:f_exec_deck_numbers_units_beginner_logic
+- FB:説明用Artifactはクリック進行:f_presentation_style_artifacts
+- FB:GBC予算資料は確度ABCの重み付けをしない:feedback_gbc_no_abc_weighting
+- GBC資料の用語と見方:feedback_gbc_deck_terms_and_framing
+- FB:章扉・タイトル・行間:f_deck_dividers_titles_linespacing

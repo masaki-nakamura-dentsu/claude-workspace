@@ -1,0 +1,5 @@
+#!/bin/sh
+# 認証情報・個人情報の混入を検知したらコミットを止める（会社Mac用。社内情報そのものは許容）
+PAT='powerplatform\.com|webhook\.office|logic\.azure|sig=[A-Za-z0-9%_-]{15,}|ghp_[A-Za-z0-9]{20,}|github_pat_|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|BEGIN (RSA|OPENSSH|PRIVATE)|(token|secret|passw(or)?d|api[_-]?key)["'"'"' ]*[:=]["'"'"' ]*[A-Za-z0-9/+_.-]{12,}|マイナンバー|パスポート番号'
+hits=$(git diff --cached --name-only --diff-filter=ACM -z -- . ":!.gitignore" ":!.githooks" | xargs -0 grep -IliE "$PAT" 2>/dev/null)
+if [ -n "$hits" ]; then echo "BLOCKED: credential/personal-info pattern in:"; echo "$hits"; echo "→ 該当ファイルを.gitignoreに追加するか内容を除去して再実行"; exit 1; fi

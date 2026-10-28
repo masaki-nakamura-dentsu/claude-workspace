@@ -1,0 +1,9 @@
+# AgencyOS Dify Web検索(Tavily)検討
+Status: in-progress
+- 2026-10-22 上司から「DifyでTavilyを組み合わせてWeb検索」の助言。検討方針を提示、中村さんの判断待ち(APIキー/課金)。
+- 2026-10-22 個人Macで着手: 9231ブラウザでapp.tavily.com →「Continue with Microsoft」→ dentsu MyApps/Okta のパスワード画面で停止(ログイン未完了、キー未取得)。中村さん承認: 無料枠・範囲は「社内データ不足時のみWeb検索」。
+- 2026-10-22 会社Macで続き(task-022 着手): 共有ブラウザ9226でTavilyにSSO自動ログイン成功(Researcher無料枠、1,000クレジット/月、APIキー "default" あり)。Difyには Tavily プラグイン無し(導入権限も無し)→標準「HTTPリクエスト」ノードで api.tavily.com/search を直接呼ぶ設計に決定。変更前ワークフローJSONは GBC-Knowledge/output/dify_workflow_backup_20261022.json に保存済み。設計=コード実行→「Web要否判定」(主4ナレッジの最大スコア<0.45 または 最新/ニュース等の語)→IF→Web検索語LLM(固有名詞を一般語化)→HTTP→整形→集約→メインLLMに【Web検索結果】ブロック+指示文追記。スコアは社内ヒット質問で最大0.558、圏外質問で0.426と差が小さいためキーワード併用。
+- 2026-10-22 停止: TavilyキーをDifyの秘密の環境変数(TAVILY_API_KEY)へ書き込む操作が自動モードの安全確認で拒否された(回避せず中断)。Dify下書きは未変更。中村さんの許可待ち。Status: waiting
+- 2026-10-22 続き: 中村さんがキーをチャットで提示→Difyのsecret環境変数 TAVILY_API_KEY に設定(キーはファイル/メモリに残していない。Tavily画面からの読み取りは安全確認で拒否されたため)。ワークフローに8ノード追加(Web要否判定→IF→Web検索語LLM→Tavily本文→HTTP→整形→集約、未使用側は空)、メインLLM指示文の先頭にWeb検索結果ブロックと扱いルールを追加。下書きテスト: (a)社内ヒットあり質問→Web未実行、(b)「2026年の最新のAI規制動向」→Tavily 200・出典URL付きEXTERNAL FACT、警告文なし。キー無効時はHTTPがdefault-valueで空に落ち従来回答。公開(20261022Web検索追加)は自動モードの安全確認で拒否→中村さんの手動公開待ち。ChatGPT(9226のchatgpt.com、temporary chat)に「今日の日付と直近1週間の広告ニュース3件」を投げ、10/22付日付・10/20報道・出典名付きの回答→Web検索あり(学習知識では出ない内容)。Agency OS Skill経由は未確認。Status: waiting
+- 会社Macへ引き継ぎ: claude_relay/company_mac_inbox.md の task-022(Status: pending)。個人Macの9231ウィンドウは画面に出したまま(ログイン未完了なら -2500,-2500 へ戻す)。
+- 2026-10-22 公開後テスト(私が下書きrun): 1回目「2026年の最新のAI規制動向」は検索語が日本語で「年」に引きずられTavilyが無関係結果(関連度0.07以下)を返し、回答に反映されず警告が残った。対策を下書きに適用: (1)Web検索語LLMを「助詞・年単独語を避け、規制/技術/市場は英語キーワード中心」に変更 (2)Web結果整形でTavily score<0.2を除外(全部除外なら空=Web未使用扱い)。再テスト: AI規制→関連度0.66-0.72の5件・EXTERNAL FACT・警告なし、中国ライブコマース→0.79-0.94・EXTERNAL FACT・警告なし、ブラジル自動車(社内十分)→Web未実行・従来どおり。改善版は下書きのみ→中村さんの再公開待ち(例: 20261022Web検索改善)。Status: waiting

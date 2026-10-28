@@ -1,0 +1,46 @@
+# 01_ルール_共通(FB)/作業全般/ 索引
+- 外部コードは全文置換:f_give_full_code_not_partial_diffs
+- pipプロキシ:f_d14461_pip_needs_corporate_proxy
+- 証明書検証:f_d14461_python_https_cert_verify_use_curl
+- スナップショット文書化:f_maintain_current_state_doc_for_long_projects
+- Proactive memory saving:proactive_project_memory_saving
+- 同期確認範囲:f_sync_check_scope
+- PA進行ルール:f_powerautomate_existing_flow_first
+- 進行スタイル:f_powerautomate_stepbystep_style
+- FB:役割要確認:f_verify_role_before_assuming
+- FB:送受信者確認:f_verify_message_direction
+- FB:依頼は段階的に:f_soft_first_outreach_then_specifics
+- WordPress要許可:f_wordpress_ask_before_changes
+- FB被追跡確認待ち:f_facebook_data_review_pending
+- FB:Dropbox同期確認:f_check_dropbox_sync_before_claiming_isolated
+- 認証コード運用:f_salesforce_verification_code_standing_permission
+- FB:TimeTree内容非表示:f_timetree_no_specific_content
+- FB:AutoSave編集不可:f_autosave_cloud_file_direct_edit
+- SendUserFile:f_senduserfile_not_visible_in_vscode
+- 廃止組織は案内しない:f_dont_recommend_defunct_orgs
+- FB:venvは同期外に:f_venv_outside_dropbox_sync
+- トークン意識標準行動:f_token_conscious_practices
+- プロジェクトから抽出:f_extract_from_project_files_before_asking
+- 作業フォルダ整理:f_claude_work_folder_organization
+- FB:画像多用作業は確認:f_confirm_before_image_heavy_work
+- 元ファイルでトークン節約:f_trace_to_source_files_to_save_tokens
+- FB:同日ファイルは削除せず追加:f_versioning_never_delete_same_day_file
+- sudo/mas制約:f_sudo_and_mas_install_limitations
+- FB:自宅インフラ非公開:f_home_infra_no_public_exposure
+- 旅程の店はホテル徒歩圏優先:f_trip_restaurants_near_hotel
+- FB:アクセス不可と言う前に既存経路を試す:f_exhaust_access_routes_before_giving_up
+- ArtifactのJSは実行時チェックも必須:f_artifact_js_runtime_check
+- 有料サービスは事前確認:f_paid_service_decision
+- feedback-quote-hide-markup-ratio:f_quote_hide_markup_ratio
+- feedback-check-latest-state-before-citing-blockers:f_check_latest_state_before_citing_blockers
+- feedback-md-view-in-vscode-preview:f_md_view_in_vscode_preview
+- feedback_sharepoint_permission_change_needs_explicit_ok:f_sharepoint_permission_change_needs_explicit_ok
+- FB:返答は必ず日本語:f_always_reply_japanese
+- FB:OneDrive正本はSharePoint RESTで上書き:f_onedrive_master_write_via_sharepoint_rest
+- FB:リンクはワークスペースのルート起点で書く:f_file_link_paths
+- FB:soffice日本語PDF文字化け:f_soffice_cjk_font_corruption
+- FB:会社アカウントのサービスはどのMacでも:f_company_account_services_any_machine
+- FB:個人MacのローカルLLMは使わない:f_no_personal_mac_local_llm
+- FB:Windowsは使い終わったら落とす:f_shutdown_windows_after_use
+- FB:Work以下は両Macで共有済み:f_work_folder_already_shared
+- FB:単発PJフォルダは先頭に日付:f_oneoff_project_folder_date_prefix

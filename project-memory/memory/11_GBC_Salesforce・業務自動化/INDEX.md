@@ -1,0 +1,24 @@
+# 11_GBC_Salesforce・業務自動化/ 索引
+- GBC department move 2026:gbc_department_move_2026
+- Power Automate gotchas:power_automate_gotchas
+- GBC業況見通しレポート:gbc_gyokyo_mitooshi_report_workflow
+- Salesforce自動DL:salesforce_report_download_automation
+- SF QBR18本:sf_reports_qbr_download_automation
+- その場検索技法:salesforce_adhoc_record_search_technique
+- GBC Smart-KINMU自動化:gbc_smart_kinmu_automation
+- Salesforceインポート:gbc_salesforce_pitch_import_csv_automation
+- GBC週報→木村DMD:gbc_weekly_report_kimura_dmd_project
+- SFレポートビルダーの罠:salesforce_report_builder_gotchas
+- GBC Salesforce In-Out案件書出し:gbc_salesforce_inout_case_export
+- 海外駐在員リスト自動取得:overseas_staff_list_sync_automation
+- 駐在履歴ファイル:overseas_staff_assignment_history
+- 異動履歴workbook:overseas_staff_timeline_workbook
+- zuno-gbc-lp-ichioshi-comment:zuno_gbc_lp_ichioshi_comment
+- japanese_client_overseas_market_report:japanese_client_overseas_market_report
+- 個人スマート勤務登録代行:smart_kinmu_personal_registration
+- アレココKnowledge表示停止の原因:arekoko_knowledge_page_recommend_crash
+- アレココ資料目録化:arekoko_catalog_project
+- SF按分×利益スプリット連動構想:sf_anbun_profit_split_linkage_plan
+- FB:JCIコメント書式・エクスポート許可:f_jci_comment_style_and_export_permission
+- FB:JCIインポート運用ルール(削除依頼=競合中止/事業区分Python算出/クライアント補完/新規フェーズ反映):f_jci_import_rules_20261026
+- [Euromonitor注記依頼(中牧さん)・URL記録](../work_status/euromonitor_notice_request_nakamaki_20261026.md)

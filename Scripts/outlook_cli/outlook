@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+set -euo pipefail
+SELF="${BASH_SOURCE[0]}"
+[ -L "$SELF" ] && SELF="$(readlink -f "$SELF")"
+DIR="$(cd "$(dirname "$SELF")" && pwd)"
+export NODE_PATH="$HOME/.local/share/claude-playwright/node_modules"
+
+CMD="${1:-}"
+[ $# -gt 0 ] && shift || true
+
+case "$CMD" in
+  login) exec node "$DIR/login.js" "$@" ;;
+  list)  exec node "$DIR/list.js" "$@" ;;
+  read)  exec node "$DIR/read.js" "$@" ;;
+  send)  exec node "$DIR/send.js" "$@" ;;
+  ""|-h|--help)
+    cat <<'USAGE'
+Outlook CLI - Outlook Web (outlook.office.com) をブラウザ自動化で操作する
+
+使い方:
+  outlook login                                     ログイン状態を確認・初回ログイン(ブラウザが開くのでSSO/MFAを完了)
+  outlook list [検索文字列] [--limit N]              受信トレイ一覧、または検索結果を表示(既定 limit=15)
+  outlook read <index> [--search "検索文字列"]        `list` の [番号] のメッセージ本文を表示
+  outlook send --to "a@example.com" [--to "b@..."] [--cc "c@..."] \
+    --subject "件名" [--attach /path] [--dry-run] "本文"
+
+送信例:
+  outlook send --to "yamada@dentsu.co.jp" --subject "テスト" "本文です"
+  outlook send --to "a@x" --cc "b@y" --subject "資料送付" --attach ~/Desktop/report.pdf "添付ご確認ください"
+  echo "本文" | outlook send --to "a@x" --subject "件名"
+  outlook send --to "a@x" --subject "件名" --dry-run "本文"   # 送信せず入力欄への反映だけ確認(自動で下書き破棄)
+
+注意: --to/--cc/--bcc は複数回指定可。本文は最後の引数、または標準入力から渡せます。
+USAGE
+    ;;
+  *)
+    echo "不明なコマンド: $CMD" >&2
+    echo "outlook --help を参照してください。" >&2
+    exit 1
+    ;;
+esac

@@ -1,0 +1,65 @@
+# 40_Claude環境・連携基盤/ 索引
+- Outlook同期トラブル:outlook_calendar_missing_after_office_container_reset
+- メール同期停止:outlook_email_sync_onedrive_deadlock_20260902
+- 会社Mac:company_mac_no_admin_no_homebrew
+- ネットワークTS:company_mac_wifi_jamf_restriction_and_tethering_workaround
+- BIG-IPループ:bigip_zscaler_reconnect_loop_conflict
+- PPTフリーズ:powerpoint_freeze_proxy_auth_issue
+- GCP制限:dentsu_google_workspace_gcp_restriction
+- Dropbox config sync:dropbox_config_sync
+- Notification/sound setup:notification_setup
+- 設定経緯:session_2026-07-07_agent_and_notification_setup
+- Local work data export:local_work_data_export
+- Outlook→Dropbox移行:outlookexport_dropbox_migration
+- Continuous data capture:continuous_data_capture_setup
+- Work-status protocol:work_status_protocol
+- マシン呼称:reference_mac_naming
+- Web自動操作基盤(CDP):claude_playwright_setup
+- ChatGPT:chatgpt_web_automation
+- Gemini:gemini_web_automation
+- TimeTree:timetree_web_automation
+- statusLine:claude_code_statusline_vscode_suppression
+- Mac→Win IME移行:mac_windows_ime_dictionary_migration
+- Mac↔Win依頼キュー:claude_relay_system
+- 共有Botブラウザ:shared_bot_browser
+- Teams CLI:teams_cli
+- LINE⇔Claude橋渡し:teams_claude_bridge
+- 自分宛て自動投稿:teams_self_chat_autopost
+- Webhook通知(PA):teams_webhook_powerautomate
+- LINE CLI中止:line_cli_attempt_paused
+- Outlook CLI:outlook_cli
+- Teams daemon統合:teams_daemon_cli_migration_todo
+- PDF軽量:pdf_shrink_tool
+- 会社VPN個人Mac不可:dentsu_vpn_esq_personal_mac_incompatible
+- 週次メモリレビュー自動化:memory_weekly_review_automation
+- Macディスク空き容量調査:mac_disk_space_cleanup_technique
+- リモートOllama/Qwen:ollama_qwen_remote_backend
+- 会社Mac導入:ollama_company_mac_setup
+- 自動化スケジュール:automation_schedule_overview
+- ChatGPTトークン節約:chatgpt_token_saving_guide
+- dentsu Claude Code申請フロー:dentsu_claude_code_it_application_process
+- Macフリーズ20260830調査:mac_freeze_20260830_ai_print_prep_incident
+- Claude Pulseダッシュボード:claude_pulse_dashboard_setup
+- Claudeルーティンvsローカル自動化:claude_routines_local_automation_gap
+- Claude in Chrome連携:claude_in_chrome_native_integration
+- OpenClaw試験導入:openclaw_setup
+- personal-windows-wol-via-crd:personal_windows_wol_via_crd
+- Windows作業後の自動シャットダウン(電気代節約):feedback_windows_auto_shutdown
+- mac-handoff-relay:mac_handoff_relay
+- Webhook文言ルール+自動修復:webhook_autofix_project
+- L…
+- MCP既定オフ:mcp_on_demand
+- CLAUDE.md旧全文:global_claude_md_full_history
+- - [ブラウザはアカウント種別で使い分け:browser_account_routing
+- 会社Mac通知移行20261013:company_mac_notify_migration_20261013
+- 会社Mac→個人Mac直接指示:mac_direct_instruction
+- Gemini CLIは撤去済み:gemini_cli_handoff_setup
+- Obsidian vault=memoryフォルダ:obsidian_vault_setup
+- iPhone→Remote Control:claude_remote_control_iphone
+- トークン固定費削減20261021:token_usage_reduction_20261021
+- 同期hookのスクリプト欠落でブロック:f_hook_script_sync
+- Claudeクレジット購入先の区別(Console=API/claude.ai=使用クレジット)20261022:f_claude_credit_purchase_routing
+- 会社Mac起動時自動処理(caffeinate/Teams始業/smtkin):company_mac_startup_automation
+- FB:個人Mac依頼はまずmac_direct send.sh:f_use_mac_direct_first
+- [feedback_long_job_progress_reporting](feedback_long_job_progress_reporting.md) — 長時間ジョブは聞かれる前に節目で進捗報告
+- [GitHub履歴管理:github_history_management] 方針・対象範囲・秘匿ガード・.git同期除外

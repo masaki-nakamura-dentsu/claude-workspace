@@ -1,0 +1,12 @@
+# 13_提案・クライアント案件/ 索引
+- セルビア万博2027入札:serbia_expo_beograd_2027_bid
+- Toyota印度AoT:toyota_india_aot_hyryder_project
+- freee請求書(AWIT):freee_invoice_awit_business
+- アニメIP海外検索ダッシュボード:anime_ip_search_dashboard_project
+- redespresso問合せメール不達修正:redespresso_contact_form_mail_fix
+- 外貨判定アプリCurrencySort:currencysort_app_project
+- freee-accounting-internal-api-registration:freee_accounting_internal_api_registration
+- nidec-components-naming-pitch:nidec_components_naming_pitch
+- JCCH CC大阪リトリート相談:jcch_cc_osaka_retreat_202611
+- 日本学道舎 学童コンサル:nihon_gakudosya_client_project
+- 万博日次ウォッチ(毎日9:00・Teams通知):serbia_expo_daily_watch

@@ -1,0 +1,23 @@
+# 01_ルール_共通(FB)/データ・Excel・PowerBI/ 索引
+- FB:PowerQuery M列名クォート:f_powerquery_m_field_quoting
+- 集計クエリで突合:f_powerquery_verify_via_aggregate_query
+- FB:自分の指示を覚える:f_powerbi_track_own_instructions
+- UIラベル正確性:f_powerbi_ui_label_accuracy
+- 公式突合FB:f_verify_against_official_totals
+- FB:周辺行の規則確認:f_check_surrounding_rows_before_manual_entry
+- PowerBIは本人作業:f_token_conscious_powerbi
+- 構造化は決定的手法:f_prefer_deterministic_over_llm
+- 本番Excel追記は全列確認:f_verify_full_schema_before_pipeline_writes
+- FB:一次情報を確認:f_verify_against_ground_truth
+- BD部原本突合:f_jci_pitchlist_check_against_bd_original
+- FB:DAXは1メジュー1コードブロック:f_dax_one_measure_per_code_block
+- DAX構文セルフチェック:f_dax_syntax_self_check
+- FB:日付はコードで検証:f_verify_dates_computationally
+- openpyxl数式シート拡張:f_openpyxl_formula_sheet_extend
+- xlsx一括再計算は型チェック:f_xlsx_recalc_type_check
+- FB:ビジュアル差替前にバインディング確認:f_verify_visual_binding_before_dax_swap
+- pbixは最新DLを使う:f_pbix_use_fresh_download
+- FB:xlsxは出力を再計算検証:f_verify_xlsx_output_not_just_python_totals
+- feedback-powerbi-schedule-toggle-fallback-pa:f_powerbi_schedule_toggle_fallback_pa
+- feedback_check_slicer_syncgroup_before_field_swap:f_check_slicer_syncgroup_before_field_swap
+- pbix中身確認(pbixray):pbix_inspect_with_pbixray

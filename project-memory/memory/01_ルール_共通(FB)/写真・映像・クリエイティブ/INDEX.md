@@ -1,0 +1,25 @@
+# 01_ルール_共通(FB)/写真・映像・クリエイティブ/ 索引
+- 漫画落とし穴:f_manga_natural_plot_logic
+- 手直しスタイル:f_shashinjuku_user_edit_style_202609
+- FB:車コンセプト劣化回避:f_avoid_prop_illustration_and_weathering_in_car_concepts
+- FB:IPコラボ画像生成:f_avoid_character_closeup_bias_in_ip_keyart
+- FB:動画編集Premiere優先:f_video_editing_prefer_premiere_settings
+- FB:写真セレクト基準:f_photo_culling_criteria
+- 現像スタイル:f_photo_develop_style
+- 写真ライセンス確認:f_verify_stock_license_per_image
+- 基準:f_ai_tips_content_curation_criteria
+- FB:Agency OSはSkillでありGPTではない:f_agency_os_is_chatgpt_skill_not_gpt
+- Thinking必須:f_agency_os_chatgpt_requires_thinking_model
+- 長大指示ファイルはchangelog分離:f_keep_long_instruction_files_lean
+- SKILL.md複数拠点同期:f_agency_os_skillmd_multi_deployment_sync
+- FB:GPT連携はKnowledge渡しも検討:f_gpt_hosting_via_knowledge_upload
+- FB:スタジオ撮影は全ポーズ残す:f_studio_portrait_culling_keep_every_pose_variant
+- FB:GBC AI資料の作成ルール:f_gbc_ai_material_authoring_rules
+- 投稿は日本語定型:f_mfk_photos_post_style
+- FB:Dify編集画面IMEリスク:f_dify_rich_text_editor_ime_risk
+- Dify検索飢餓が捏造を招く:f_dify_retrieval_starvation_causes_fabrication
+- FB:マルチカム切替の好み:f_video_edit_multicam_style
+- FB:Global Q記事は本人の原文を残す:f_globalq_keep_interviewee_wording
+- FB:Agency OSは文字数制限しない:f_agency_os_no_length_cap
+- FB:AgencyOS読みやすさはHTMLでなく構成で:f_agency_os_readability_via_structure_not_html
+- FB:PureRAWはLRメニュー経由・画面キャプチャNG:feedback_pureraw_via_lightroom_menu_no_screencapture

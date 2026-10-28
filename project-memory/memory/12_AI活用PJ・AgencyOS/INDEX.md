@@ -1,0 +1,28 @@
+# 12_AI活用PJ・AgencyOS/ 索引
+- AI活用PJ海外費用:ai_katsuyo_pj_overseas_funding
+- AIアンバサダー:ai_katsuyo_pj_ambassador
+- AI審査員プロジェクト:ai_shinsain_project
+- 博報堂企画書分析:hakuhodo_proposal_analysis
+- 週刊AI Tips:ai_katsuyo_pj_weekly_tips
+- Teamsダイジェスト:ai_teams_weekly_digest
+- GBC Intelligence Engine/Agency OS Skill:gbc_intelligence_engine_project
+- Agent OSフィードバック対応:ai_agency_team_feedback_20260903
+- Agency OS PoC仮想ブリーフ28名:agency_os_poc_participant_virtual_briefs_20260911
+- 博報堂海外戦略モニタリング:hakuhodo_overseas_intel_monitoring
+- dentsu-ccs-explorer-api:dentsu_ccs_explorer_api
+- bigidea_random_keyword_experiment:bigidea_random_keyword_experiment
+- AI People Research:reference_ai_people_research
+- ChatGPT共同チャット相談:project_chatgpt_group_collab_consult
+- BXグローバル浸透施策:bx_global_enablement_project
+- Agency OS PoC FB・改修:agency_os_poc_feedback_20261013
+- Agency OS反映ツール(API):agency_os_deploy_tools
+- AI関連フォルダの置き場所:ai_folder_layout
+- CCS/PR局員展開案:ccs_peopleresearch_bureau_rollout
+- BP局×クライアント索引(Agency OS):agency_os_bp_client_index
+- ChatGPTカスタム指示で新チャット推奨を検証→発動せず見送り:chatgpt_clear_recommend_custom_instructions_test
+- 局員向けCodex(Windows)導入レクチャー素材・更新版マニュアル:codex_windows_lecture_folder
+- 【CCS更新はAudience Builder使用/旧Explorerは保存】移行ルール・構成:dentsuconnect_ccs_migration
+- AB集計取得ツール(ab_client.js)構築済:dentsuconnect_ccs_migration
+- Media Planner(旧CCS Planner)操作・詰まり所:media_planner_ccs_planner
+- [鮮度] 資料のデータは最新版から取る:feedback_deck_use_latest_data_only
+- Agency OS正式名ChatGBC決定・告知文案:chatgbc_rename_announcement

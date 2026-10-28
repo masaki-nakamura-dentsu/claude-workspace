@@ -1,0 +1,35 @@
+# 01_ルール_共通(FB)/ブラウザ・自動化/ 索引
+- FB:MFA churn回避:f_avoid_mfa_churn
+- aicon手動操作限定:f_powerautomate_aicon_browser_manual_only
+- FB:ゲート判定は単体検証:f_verify_gating_logic_without_running_full_script
+- 設定編集確認:f_unattended_global_config_edit_confirm_first
+- FB:AI Web自動積極利用:f_use_ai_web_automation_proactively
+- 画像生成は複数タブ:f_parallel_tab_image_generation
+- Lightroom前面化は事前確認:f_lightroom_foreground_launch_ask
+- FB:共有ブラウザ宛先検証:f_verify_destination_before_shared_browser_send
+- FB:過剰ポーリング禁止:f_avoid_excessive_background_polling
+- GUI自動操作は着手前確認:f_reduce_browser_automation_tokens
+- FB:ブラウザ標準6箇条:f_browser_automation_standing_practices
+- フォーカス奪取禁止:f_browser_automation_no_focus_steal
+- FB:自動モードは共有ファイル直接上書き禁止:f_auto_mode_blocks_shared_file_overwrite
+- Tableau複数選択は分解しない:f_tableau_multiselect_no_split_for_charts
+- FB:自動化頻度はソース更新頻度に合わせる:f_match_automation_frequency_to_source_cadence
+- 自動化に失敗通知を埋め込む:f_bake_error_notifications_into_automation
+- FB:Web文件アップロードはfilechooser方式:f_web_file_upload_use_filechooser_not_hidden_input
+- feedback_handoff_include_verification_prompt:f_handoff_include_verification_prompt
+- feedback-powerbi-browser-only:f_powerbi_browser_only
+- feedback_kgikpi_blank_anken_means_crosstable_lag:f_kgikpi_blank_anken_means_crosstable_lag
+- FB:無人エージェント/launchdはauto mode拒否→コマンド渡し:f_auto_mode_unattended_agent_launchd
+- FB:RunAtLoadジョブの再読込:f_launchd_reload_without_runatload
+- FB:AppleScriptの日本語名closeは誤爆する:f_osascript_close_by_name_unreliable
+- FB:許可済みスクリプトは後から編集しない:f_auto_mode_allowlisted_script_no_edit
+- FB:ミツモアは最終設問で送信・5社配信:f_meetsmore_request_submits_before_tos_popup
+- FB:botブラウザは用事が済んだら閉じる:f_close_bot_browser_when_done
+- FB:使い終わったタブは閉じる:f_close_tabs_after_browser_work
+- FB:Webhook件名は28字以内:f_webhook_title_length
+- FB:拒否後のダミーecho禁止:f_no_fake_echo_justification
+- FB:ローカルで済む作業はMac間リレーへ:f_handoff_to_other_mac_over_browser
+- FB:Gem修正は画像生成を明示:f_gemini_gem_followup_needs_explicit_image
+- notify.shはsource専用:f_teams_notify_sh_is_source_only
+- FB:Global Q Viva Engage投稿はGlobal Q名義で(投稿者名を確認):f_globalq_vivaengage_post_as_globalq
+- [OS clipboard禁止](feedback_no_os_clipboard_in_browser_automation.md) — 自動投稿は別ブラウザに貼り付く恐れ。page内pasteイベントで

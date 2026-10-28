@@ -1,0 +1,4 @@
+- 2026-10-21 Claude Code使用量統計(/usage系の表示)の意味を日本語で解説。Status: done
+- 2026-10-21 MEMORY.md圧縮(41.9→22KB)、CLAUDE.md整理(21→約5KB)、claude.aiコネクタ/github/context7を無効化。Status: done
+- 2026-10-21 Teams未着の原因(notify.shの直接実行)を特定してCLIで再送、会社Macにtask-021を依頼。Status: done
+- 2026-10-21 週次メモリレビューにMEMORY.md/CLAUDE.md圧縮手順を追加。Status: done

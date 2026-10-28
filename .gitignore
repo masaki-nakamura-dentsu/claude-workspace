@@ -1,0 +1,59 @@
+# 許可リスト方式: 既定で全て除外し、明示したものだけGit管理する（会社Mac用・.claude-sync直下に置く）
+/*
+!/.gitignore
+!/.githooks/
+!/CLAUDE.md
+!/settings.json
+!/Scripts/
+!/claude_relay/
+/claude_relay/direct/
+!/project-memory/
+/project-memory/*
+!/project-memory/memory/
+/project-memory/memory/*
+!/project-memory/memory/MEMORY.md
+!/project-memory/memory/01_ルール_共通(FB)/
+!/project-memory/memory/10_GBC_QBR・KPI・PowerBI/
+!/project-memory/memory/11_GBC_Salesforce・業務自動化/
+!/project-memory/memory/12_AI活用PJ・AgencyOS/
+!/project-memory/memory/13_提案・クライアント案件/
+!/project-memory/memory/40_Claude環境・連携基盤/
+!/project-memory/memory/20_写真・映像・創作/
+/project-memory/memory/20_写真・映像・創作/*
+!/project-memory/memory/20_写真・映像・創作/globalq_*
+!/project-memory/memory/work_status/
+# 除外: 個人・家族(30)、個人メモ、写真映像創作(20=個人Mac側)、バックアップ
+# ログ・キュー・旧版・バイナリ
+logs/
+queue/
+claude_md_backups/
+*.bak*
+*.log
+*.jsonl
+*.env
+.env*
+*.pem
+*.key
+*.sqlite*
+*.db
+*.pptx
+*.xlsx
+*.xlsm
+*.pdf
+*.psd
+*.jpg
+*.png
+.DS_Store
+__pycache__/
+.venv*/
+node_modules/
+# Webhook URLを含むメモ
+/project-memory/memory/40_Claude環境・連携基盤/teams_webhook_powerautomate.md
+# 個人リポジトリ(個人Mac)で管理
+/Scripts/photo_club_pdf/
+/Scripts/adobe_cli/
+/claude_relay/README.md
+/claude_relay/github_setup/
+# 個人Macで管理する作業ログ
+/project-memory/memory/work_status/*photo_club*
+/project-memory/memory/work_status/*adobe_cli*

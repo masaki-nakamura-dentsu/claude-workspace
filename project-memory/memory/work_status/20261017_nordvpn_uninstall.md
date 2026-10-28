@@ -1,0 +1,14 @@
+# NordVPN 解約確認とアンインストール (個人Mac ICPTokyo2022)
+- Date: 2026-10-17
+- Status: done (再起動で残プロセス終了)
+- 解約確認: 個人Gmail(maxakisan-bot 9230)で 10/13「You’ve canceled your subscription」を確認。最後の請求は9/17(月額2,508円)。その後の請求メールなし
+- 済: ユーザー領域のデータ(Application Support/Caches/HTTPStorages/Preferences)を ~/.Trash/NordVPN_uninstall_20261017 へ移動
+- 未: /Applications/NordVPN.app(root所有)、/Library/LaunchDaemons/com.nordvpn.macos.helper.plist、/Library/PrivilegedHelperTools/com.nordvpn.macos.helper(動作中)、~/Library/Containers/com.nordvpn.macos.*(3つ、権限で移動不可)。管理者パスワード画面はキャンセルされた
+- 追記: ユーザーから「アプリ画面からゴミ箱でアンインストールできるか」と質問。Finderでゴミ箱に入れればアプリ本体は消えるが、ヘルパー2ファイルは残ると回答
+- 追記: パスワード拒否の質問。maxakisanは管理者グループ所属を確認→権限の問題ではない。CapsLock/入力ソースが原因の可能性と回答
+- 追記: 2回目の管理者画面で成功。アプリ本体・LaunchDaemon plist・ヘルパー本体を削除、launchd登録も消えた。ヘルパーのプロセス(PID 2560)だけメモリ上に残存→再起動で消える。Containers 3フォルダは残置(macOS保護)
+- 追記: ユーザー「個人Windows側処理終了」→ relay task-016 を実施・完了(ssh config User変更+win-ts追加、疎通両方OK)。task-017(raspi WoL中継)は許可待ち
+- 追記: task-017 完了。Windows停止→ラズパイ経由WoLで70秒で復帰、OllamaはWMI起動で復帰。win_wake_full.sh新設
+- 追記: 外出先Ollama対応。原因=再起動後Windows Tailscaleがログアウト(ユーザーログオン依存)。tailscale up --unattended 実行、ブラウザ承認待ち。FWはOllama LAN(11434) Private/Any で問題なし
+- 追記: Windows Tailscaleをunattended化(ユーザー承認)、再起動後も接続OK。OLLAMA_HOSTをdesktop-ryzen5950に変更。win_power.sh統合(wake/ollama/status、LAN→TSフォールバック)、再起動テスト成功。Status: done
+- 追記: ユーザー指示「作業後はWindowsをシャットダウン」→ feedback_shutdown_windows_after_use.md 作成。Windowsをshutdown(60秒)→停止を確認
