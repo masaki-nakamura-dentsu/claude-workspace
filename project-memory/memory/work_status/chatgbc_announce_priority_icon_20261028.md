@@ -72,3 +72,8 @@ Status: in_progress
 What: 指示文_05でもDifyのインドネシア回答で Skin Care in Indonesia のURL日付を 20260512 と誤記(正:20260521)。LLMの系統的な写し間違い。指示文では直らない。対策案: Difyの回答前にコードノードを挟み、回答中のEuromonitor URLが検索結果(変数l)に無ければ、同じファイル名末尾(日付以降)を持つ検索結果内のURLに置換する。ChatGPT側は後処理不可、写し間違いの可能性が残る(日付8桁を避ける別方式も検討)。Dify公開は未実施・本人確認待ち。ChatGPT Skillはversion180以降の最新(指示文_05)。
 Next: 本人に対策案(コードノードで自動補正)の可否を確認 → 実装 → 全URL照合テスト → 公開確認。
 再開時の一文: 「ChatGBCの続き。work_status/chatgbc_announce_priority_icon_20261028 を読んで」
+
+## 2026-10-28 午後
+Status: in_progress
+What: 本人質問「パートごとに生成→文字列連結にすればブレは減るか」。回答=形式・長さのブレは減るが、URL写し間違いは直らない(LLMが書き写す限り残る)。全体分割は3倍コスト・優先順位ルール(横断)が崩れるため見送り、URLだけ機械的に補正する方式を採用。実装: tools/dify_wire_euromonitor_urlfix.js で Dify に「Euromonitor URL補正」コードノード(1792200000006)を llm→answer の間に追加(回答ノードは補正後textを出力)。回答中のレポートファイルURL(.pdf/.txt/.html)が検索結果の目録に無ければ、日付8桁を除いた同名ファイルのURLに置換、同名が無ければ同フォルダURLへ、フォルダURL等は触らない。あいまい一致(別レポートへの誤置換)は危険なため廃止。単体テスト(日付誤り→置換、同名なし→フォルダ、India等は不変)OK、実機テスト(インドネシア化粧品/スキンケア)でエラーなし・既存URL不変。下書きのみ、公開は未実施。
+Next: 本人に公開可否を確認 → dify_prompt.js --publish。ChatGPT側は後処理不可(指示文_05のまま)。

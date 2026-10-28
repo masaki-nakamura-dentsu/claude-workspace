@@ -377,7 +377,7 @@ Result: 個人Mac原文がDropbox未同期だったため、会社MacでPPTX(sli
 
 ## [2026-10-28T12:00] task-GH-001 — Claude環境+業務スクリプトのGitHub履歴管理を会社Macで開始
 Project: 中村正樹/.claude-sync (会社Macでは `dentsuDropbox/.../.claude-sync`)
-Status: pending
+Status: done (2026-10-28 会社Mac)
 Instruction: |
   背景: 中村さんが「Claude環境と業務は会社Macからcommit/pushする」と決定(会社がGitHub利用を推奨、Claude契約も会社契約、GitHubアカウントは会社アカウント)。
   個人Macでは検討用に仮リポジトリを作ったが破棄済み。雛形は `claude_relay/github_setup/` にある。会社Macは **gitのみ**(gh/Homebrewなし)で運用する。
@@ -393,4 +393,4 @@ Instruction: |
   8b. 追記(2026-10-28): `Scripts/photo_club_pdf/` と `Scripts/adobe_cli/` は個人リポジトリ(個人Mac)で管理するため、会社の`.gitignore`に `/Scripts/photo_club_pdf/` `/Scripts/adobe_cli/` を追加して除外する。また memory `20_写真・映像・創作/globalq_*` 5件は会社業務なので、中村さんに確認のうえ会社リポジトリの許可リストに追加するか決める。
   9. 納品物は従来どおり `_YYYYMMDD` 別名保存(Gitと併用)。Git対象はテキスト/コードのみ（pptx/xlsx/pdf等は.gitignoreで除外済み）。
   10. 完了後、Result欄に追跡ファイル数・リポジトリURL・コミットID を記録し、`[DONE]` をTeams通知。
-Result:
+Result: 追跡787ファイル、https://github.com/masaki-nakamura-dentsu/claude-workspace 、初回commit 5a5af94。pushは社内プロキシ必須(repo-localに設定済み)。分類器がpushを拒否するため本人ターミナルで実行。globalq_*5件は許可リストに追加、photo_club/adobe_cliは除外。/save コマンドを ~/.claude/commands/save.md に作成。メモリ github_history_management に追記。

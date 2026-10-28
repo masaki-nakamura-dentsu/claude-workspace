@@ -9,6 +9,7 @@
       "Edit(//Users/d14461/.claude/projects/*/memory/**)",
       "Read(//Users/maxakisan/.claude/projects/*/memory/**)",
       "Edit(//Users/maxakisan/.claude/projects/*/memory/**)",
+      "Bash(git push -u origin main:*)",
       "Bash(python3 *)"
     ]
   },
